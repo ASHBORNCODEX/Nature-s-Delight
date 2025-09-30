@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'web/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'web/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'web/css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'web/css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/jquery.timepicker.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'web/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
+  </head>
+  <body class="goto-here">
+		<div class="py-1 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+ 1235 2355 98</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">youremail@email.com</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+						    <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+         <div style="margin-left: 40px;">
+       <a href="{% url 'admin_login_page' %}"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2" viewBox="0 0 16 16">
+  <path d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68"/>
+</svg></a>
+    </div>
+	    <div class="container">
+
+	      <a class="navbar-brand" href="{% url 'Home' %}">Nature's Delight</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{% url 'Home' %}" class="nav-link">Home</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  {% for i in categories %}
+              	<a class="dropdown-item" href="{% url 'filtered_product' ctg_name=i.Category_Name  %}">{{i.Category_Name}}</a>
+                  {% endfor %}
+              </div>
+            </li>
+	          <li class="nav-item"><a href="{% url 'all_products' %}" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="{% url 'about_us' %}" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="{% url 'contact_us' %}" class="nav-link">Contact</a></li>
+                {% if request.session.Name %}
+	          <li class="nav-item"><a href="{% url 'user_logout' %}" class="nav-link">Welcome {{request.session.Name}} / Logout</a></li>
+                {% else %}
+	          <li class="nav-item"><a href="{% url 'user_registration' %}" class="nav-link">Click here to register or Login</a></li>
+                {% endif %}
+                {% if request.session.Name %}
+	          <li class="nav-item cta cta-colored"><a href="{% url 'cart_page' %}" class="nav-link"><span class="icon-shopping_cart"></span>[{{cart_total}}]</a></li>
+                {% endif %}
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section id="home-section" class="hero">
+		  <div class="home-slider owl-carousel">
+	      <div class="slider-item" style="background-image: url('{% static 'web/images/bg_1.jpg' %}');">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+	            <div class="col-md-12 ftco-animate text-center">
+	              <h1 class="mb-2">We serve Fresh Vegestables &amp; Fruits</h1>
+	              <h2 class="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
+	              <p><a href="#" class="btn btn-primary">View Details</a></p>
+	            </div>
+
+	          </div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item" style="background-image: url({% static 'web/images/bg_2.jpg' %});">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+	            <div class="col-sm-12 ftco-animate text-center">
+	              <h1 class="mb-2">100% Fresh &amp; Organic Foods</h1>
+	              <h2 class="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
+	              <p><a href="#" class="btn btn-primary">View Details</a></p>
+	            </div>
+
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+
+    <section class="ftco-section">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-1 active d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-shipped"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Free Shipping</h3>
+                <span>On order over $100</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-diet"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Always Fresh</h3>
+                <span>Product well package</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-award"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Superior Quality</h3>
+                <span>Quality Products</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services mb-md-0 mb-4">
+              <div class="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Support</h3>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+		</section>
+
+
+
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<span class="subheading">Featured Products</span>
+            <h2 class="mb-4">Our Categories</h2>
+<!--            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>-->
+          </div>
+        </div>
+    	</div>
+    	<div class="container">
+    		<div class="row">
+                {% for c in categories %}
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img style="height:200px;" src="{{c.Category_Image.url}}" alt="Colorlib Template">
+<!--    						<span class="status">30%</span>-->
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">{{c.Category_Name}}</a></h3>
+    					</div>
+    				</div>
+    			</div>
+                {% endfor %}
+    		</div>
+    	</div>
+    </section>
+
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+      <div class="container py-4">
+        <div class="row d-flex justify-content-center py-5">
+          <div class="col-md-6">
+          	<h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
+          	<span>Get e-mail updates about our latest shops and special offers</span>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <form action="#" class="subscribe-form">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control" placeholder="Enter email address">
+                <input type="submit" value="Subscribe" class="submit px-3">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Nature's Delight</h2>
+              <p  style="text-align: justify;">Nature’s Delight is an online platform delivering fresh vegetables, seasonal fruits,
+                  and healthy snacks directly from local farms and trusted suppliers. Customers can browse, order,
+                  and receive products without stepping out of their homes.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'all_products' %}" class="py-2 d-block">Product</a></li>
+                <li><a href="{% url 'about_us' %}" class="py-2 d-block">About</a></li>
+                <li><a href="{% url 'contact_us' %}" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><address>
+                      Nature’s Delight Pvt. Ltd.<br>
+                      21 Greenfield Lane, Eco Park Road<br>
+                      Bangalore, Karnataka – 560103<br>
+                      India
+                    </address>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 456987123</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">AshBorn@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'web/js/jquery.min.js' %}"></script>
+  <script src="{% static 'web/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'web/js/popper.min.js' %}"></script>
+  <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'web/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'web/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'web/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'web/js/aos.js' %}"></script>
+  <script src="{% static 'web/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'web/js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'web/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'web/js/google-map.js' %}"></script>
+  <script src="{% static 'web/js/main.js' %}"></script>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+{% extends 'Dashboard.html' %}
+{% block content %}
+<div class="col-sm-12 col-xl-12">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Edit Category</h6>
+        
+        <form method="post" action="{% url 'update_category' Category_ID=data.id %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <!-- Category Name -->
+            <div class="mb-3">
+                <label for="exampleInputCategory" class="form-label">Category</label>
+                <input type="text" class="form-control" id="exampleInputCategory"
+                       name="category" placeholder="Category Name"
+                       value="{{ data.Category_Name }}">
+            </div>
+            
+            <!-- Current Image Preview -->
+            {% if data.Category_Image %}
+            <div class="mb-3">
+                <label class="form-label d-block">Current Image</label>
+                <img src="{{ data.Category_Image.url }}" alt="Category Image" class="img-thumbnail mb-2" style="max-width: 200px;">
+            </div>
+            {% endif %}
+            
+            <!-- Upload New Image -->
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload New Image</label>
+                <input class="form-control bg-dark" type="file" id="formFile" name="image">
+            </div>
+            
+            <!-- Description -->
+            <div class="mb-3">
+                <label for="floatingTextarea" class="form-label">Description</label>
+                <textarea class="form-control" id="floatingTextarea" style="height: 150px;" name="category_description">{{ data.Category_Description }}</textarea>
+            </div>
+            
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
+
+<!-- SweetAlert Messages -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+    {% for i in messages %}
+        <script>
+            swal('{{ i }}', '', '{{ i.tags }}');
+        </script>
+    {% endfor %}
+{% endif %}
+{% endblock %}

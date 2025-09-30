@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% extends 'Dashboard.html' %}
+{% block content %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product</title>
+</head>
+
+<body>
+  <div class="col-sm-12 col-xl-12">
+    <div class="bg-secondary rounded h-100 p-4">
+      <h6 class="mb-4">Add Product</h6>
+      <form method="post" action="{% url 'save_product' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <!-- Category Selection -->
+          <div class="form-floating mb-3">
+    <select class="form-select" id="floatingSelect" name="product_category" required>
+        <option value="" selected disabled>Select Category</option>
+        {% for i in categories %}
+        <option>{{ i.Category_Name }}</option>
+        {% endfor %}
+    </select>
+    <label for="floatingSelect">Select Category</label>
+</div>
+
+
+          <!-- Product Name -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="productName" name="product_name" placeholder="Product Name" required>
+            <label for="productName">Product Name</label>
+          </div>
+
+          <!-- Product Price -->
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="productPrice" name="price" placeholder="Product Price" required>
+            <label for="productPrice">Product Price</label>
+          </div>
+
+          <!-- Description -->
+          <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Description" id="floatingTextarea" style="height: 150px;" name="product_description"></textarea>
+            <label for="floatingTextarea">Description</label>
+          </div>
+
+          <!-- Image Upload -->
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Upload Image</label>
+            <input class="form-control bg-dark" type="file" id="formFile" name="image">
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Add Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+    {% for i in messages %}
+        {% if i.tags == 'success' %}
+        <script>
+            swal('{{i}}' , '' , 'success');
+        </script>
+        {% elif i.tags == "error" %}
+        <script>
+            swal('{{i}}' , '' , 'error');
+        </script>
+        {% elif i.tags == "warning" %}
+        <script>
+            swal('{{i}}' , '' , 'warning');
+        </script>
+        {% elif i.tags == 'info' %}
+        <script>
+            swal('{{i}}' , '' , 'info');
+        </script>
+        {% endif %}
+    {% endfor %}
+
+{% endif %}
+</body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'Dashboard.html' %}
+{% block content %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product</title>
+</head>
+<div class="col-sm-12 col-xl-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Product Details</h6>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Category Name</th>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Product Description</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Image</th>
+                                        <th scope="col">Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in product %}
+                                    <tr>
+                                        <td>{{i.Category_Name}}</td>
+                                        <td>{{i.Product_Name}}</td>
+                                        <td>{{i.Product_Description}}</td>
+                                        <td>{{i.Price}}</td>
+                                        <td>
+                                            <img src="{{i.Product_Image.url}}" style="height=100px; width:100px;">
+                                        </td>
+                                        <td style="display:flex;">
+                                            <a href="{% url 'edit_product' Product_ID=i.id %}"><button type="button" class="btn btn-outline-success m-4">Edit</button></a>
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'delete_product' P_ID=i.id %}"><button type="button" class="btn btn-outline-primary m-4">Delete</button></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+
+                            </table>
+                        </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

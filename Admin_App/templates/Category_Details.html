@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'Dashboard.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="col-sm-12 col-xl-12">
+                        <div class="bg-secondary rounded h-100 p-4">
+                            <h6 class="mb-4">Accented Table</h6>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Category Name</th>
+                                        <th scope="col">Category Image</th>
+                                        <th scope="col">Category Description</th>
+                                        <th scope="col">Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for i in category %}
+                                    <tr>
+                                        <td>{{i.Category_Name}}</td>
+                                        <td>
+                                            <img src="{{i.Category_Image.url}}" style="height=100px; width:100px;">
+                                        </td>
+                                        <td>{{i.Category_Description}}</td>
+                                        <td style="display:flex;">
+                                            <a href="{% url 'edit_category' Category_ID=i.id %}"><button type="button" class="btn btn-outline-success m-4">Edit</button></a>
+                                        </td>
+                                        <td>
+                                            <a href="{% url 'delete_category' C_ID=i.id %}"><button type="button" class="btn btn-outline-primary m-4">Delete</button></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+</body>
+</html>
+{% endblock %}
