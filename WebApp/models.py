@@ -35,3 +35,11 @@ class ContactDB(models.Model):
     E_Mail = models.CharField(max_length=50,null=True,blank=True)
     Subject = models.CharField(max_length=50,null=True,blank=True)
     Message = models.CharField(max_length=500,null=True,blank=True)
+
+
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(unique=True)
+    subscribed_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email

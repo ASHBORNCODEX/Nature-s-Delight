@@ -4,6 +4,7 @@ from WebApp.models import RegistrationDB ,ContactDB , CartDB , OrderDB
 from django.contrib import messages
 from WebApp.decorators import session_login_redirect
 import razorpay
+from .models import NewsletterSubscriber
 
 # Create your views here.
 def Home(request):
@@ -134,7 +135,7 @@ def cart_page(request):
             else :
                 delivery_charge = 100
             total_amount = sub_total + delivery_charge
-    messages.success(request, 'Product Added to Cart ')
+
     return render(request , 'Cart.html' , {'data' : data ,'sub_total' : sub_total ,
                                          'delivery_charge' : delivery_charge, 'total_amount' : total_amount ,
                                            'categories' :categories , 'cart_total' : cart_total})
@@ -171,7 +172,6 @@ def save_to_cart(request):
                 Product_Image=img
             )
             obj.save()
-        # messages.success(request, 'Product Added to Cart ')
         return redirect(Home)
 
 @ session_login_redirect
@@ -262,3 +262,18 @@ def payment(request):
     return render(request, 'Payment.html',{'cart_total' : cart_total, 'categories' : categories,
                                            'pay_str':pay_str})
 
+
+
+def subscribe_newsletter(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        if email:
+            # Save the email to database
+            subscriber, created = NewsletterSubscriber.objects.get_or_create(email=email)
+            if created:
+                messages.success(request, "Subscribed successfully!")
+            else:
+                messages.info(request, "You are already subscribed.")
+        else:
+            messages.error(request, "Please enter a valid email.")
+    return redirect(request.META.get('HTTP_REFERER', '/'))

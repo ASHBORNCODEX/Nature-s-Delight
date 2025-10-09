@@ -19,11 +19,11 @@ db.sqlite3         # common name for default DB
 *.swp
 
 # Media files
-media/
+
 
 # Static files (collected)
 staticfiles/
-static/
+
 
 # Build / distribution folders
 build/
