@@ -1,6 +1,6 @@
 # My Django Project
 
-This is a demo-ready version of my Django project for interviews.
+This is a demo-ready version of my Django project
 
 ## Setup Instructions
 
